@@ -1,0 +1,5 @@
+
+https://jakobmiksch.eu/post/osm2pgsql-replication-script/
+https://2019.stateofthemap.org/attachments/K8N3XY_2019-09-22-talk-sotm2019-osm-postgresql-postgis-en-slides.pdf
+
+https://www.youtube.com/watch?v=0atJYTzFm7U
