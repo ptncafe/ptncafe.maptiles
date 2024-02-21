@@ -1,0 +1,6 @@
+tilemaker --input vietnam-latest.osm.pbf --output=vietnam.mbtiles --process process-openmaptiles.lua
+
+
+osmium export  vietnam-latest.osm.pbf -o vietnam.geojson
+
+tippecanoe -zg -o vietnam.mbtiles --drop-densest-as-needed vietnam.geojson
