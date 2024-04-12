@@ -1,0 +1,2 @@
+docker build -t imposm3 .
+https://github.com/kartoza/docker-osm

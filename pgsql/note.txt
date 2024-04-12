@@ -1,3 +1,13 @@
+step by step
+
+create postgis 
+    #https://osm2pgsql.org/doc/manual.html
+    sudo -u postgres createuser osmuser
+    sudo -u postgres createdb --encoding=UTF8 --owner=osmuser osm
+    sudo -u postgres psql osm --command='CREATE EXTENSION postgis;'
+    sudo -u postgres psql osm --command='CREATE EXTENSION hstore;'
+run  .\run_osm2pgsql.bat
+
 
 https://jakobmiksch.eu/post/osm2pgsql-replication-script/
 https://2019.stateofthemap.org/attachments/K8N3XY_2019-09-22-talk-sotm2019-osm-postgresql-postgis-en-slides.pdf

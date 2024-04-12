@@ -1,0 +1,1 @@
+docker run -v ${pwd}/import:/import -v ${pwd}/mapping:/mapping  -e PGHOST="localhost" -e PGPORT=25432 -e PGDATABASE="osm_db" -e PGUSER="docker" -e PGPASSWORD="docker"  openmaptiles/import-osm 
