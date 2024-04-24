@@ -1,1 +1,1 @@
-PORT=9999 TILE_DIR=./file VERBOSE=true ./mbtileserver --basemap-style-url "https://tiles.stadiamaps.com/styles/stamen_toner_lite.json" --basemap-tiles-url  https://tile.openstreetmap.org/{z}/{x}/{y}.png
+PORT=9999 TILE_DIR=./file VERBOSE=true mbtileserver --basemap-style-url styles/map_navigation_styles.json --basemap-tiles-url  https://tile.openstreetmap.org/{z}/{x}/{y}.png

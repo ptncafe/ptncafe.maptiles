@@ -1,0 +1,11 @@
+#install tilemaker
+https://github.com/systemed/tilemaker
+brew install boost lua shapelib rapidjson
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+
+#install mbtileserver
+go install github.com/consbio/mbtileserver@latest

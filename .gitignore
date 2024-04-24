@@ -2,3 +2,4 @@
 /mbtiles/file/*.pbf
 tegola/docker-imposm3/import/vietnam-latest.osm.pbf
 tegola/tegola.exe
+mbtiles/file/*.mbtiles

@@ -1,0 +1,1 @@
+tilemaker --input file/vietnam-latest.osm.pbf --output=file/vietnam.mbtiles --process resources/process-openmaptiles.lua
