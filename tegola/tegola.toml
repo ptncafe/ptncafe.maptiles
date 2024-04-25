@@ -11,9 +11,9 @@ port = ":9812"
   Cache-Control = "s-maxage=300"
 
 # Tegola offers three tile caching strategies: "file", "redis", and "s3"
-[cache]
-type = "file"
-basepath="/tmp/tegola-cache"
+#[cache]
+#type = "file"
+#basepath="/tmp/tegola-cache"
 
 
 #   OpenStreetMap (OSM)
@@ -27,7 +27,7 @@ max_connections = 30
 	name = "land_8-20"
 	geometry_fieldname = "geometry"
 	id_fieldname = "ogc_fid"
-	sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid FROM land_polygons WHERE wkb_geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid FROM simplified_land_polygons WHERE wkb_geometry && !BBOX!"
 
 	# Water
 	[[providers.layers]]
