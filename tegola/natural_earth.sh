@@ -40,7 +40,7 @@ while getopts ":c:dv" flag; do
 done
 
 # database connection variables
-DB_NAME="natural_earth_db"
+DB_NAME="osm_db"
 DB_HOST="localhost"
 DB_PORT="25432"
 DB_USER="docker"

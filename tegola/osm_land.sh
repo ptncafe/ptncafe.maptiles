@@ -38,9 +38,9 @@ done
 # database connection variables
 DB_NAME="osm_db"
 DB_HOST="localhost"
-DB_PORT="5432"
-DB_USER="dev"
-DB_PW="@@@bedev"
+DB_PORT="25432"
+DB_USER="docker"
+DB_PW="docker"
 
 # Check if we're using a config file
 if [[ -r $CONFIG_FILE ]]; then source $CONFIG_FILE
@@ -53,8 +53,8 @@ psql "dbname='postgres' host='$DB_HOST' port='$DB_PORT' user='$DB_USER' password
 # array of natural earth dataset URLs
  dataurls=(
 	#"https://osmdata.openstreetmap.de/download/land-polygons-split-3857.zip"
-  #"file/land-polygons-split-3857.zip"
-  "file/simplified-land-polygons-complete-3857.zip"
+  "file/land-polygons-split-3857.zip"
+  #"file/simplified-land-polygons-complete-3857.zip"
 )
 
 psql "dbname='$DB_NAME' host='$DB_HOST' port='$DB_PORT' user='$DB_USER' password='$DB_PW'" -c "DROP TABLE IF EXISTS land_polygons"

@@ -75,7 +75,7 @@
         "type": "fill",
         "source": "osm",
         "source-layer": "landuse_areas",
-        "minzoom": 13,
+        "minzoom": 8,
         "maxzoom": 24,
         "layout": {
           "visibility": "visible"
@@ -251,7 +251,7 @@
         "type": "fill",
         "source": "osm",
         "source-layer": "landuse_areas",
-        "minzoom": 10,
+        "minzoom": 8,
         "maxzoom": 13,
         "layout": {
           "visibility": "visible"
@@ -295,7 +295,7 @@
         "type": "fill",
         "source": "osm",
         "source-layer": "landuse_areas",
-        "minzoom": 7,
+        "minzoom": 5,
         "maxzoom": 10,
         "filter": [
           "all",
@@ -319,7 +319,7 @@
         "type": "fill",
         "source": "osm",
         "source-layer": "landuse_areas",
-        "minzoom": 5,
+        "minzoom": 4,
         "maxzoom": 7,
         "filter": [
           "all",
@@ -396,7 +396,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "landuse_areas",
-        "minzoom": 13,
+        "minzoom": 8,
         "maxzoom": 24,
         "filter": [
           "all",
@@ -476,7 +476,7 @@
         "type": "fill",
         "source": "osm",
         "source-layer": "buildings",
-        "minzoom": 14,
+        "minzoom": 12,
         "maxzoom": 24,
         "filter": [
           "all"
@@ -494,7 +494,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "water_lines",
-        "minzoom": 13,
+        "minzoom": 10,
         "maxzoom": 24,
         "filter": [
           "all",
@@ -529,7 +529,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "water_lines",
-        "minzoom": 15,
+        "minzoom": 14,
         "maxzoom": 24,
         "filter": [
           "all",
@@ -643,7 +643,7 @@
         "type": "fill",
         "source": "osm",
         "source-layer": "water_areas",
-        "minzoom": 5,
+        "minzoom": 4,
         "maxzoom": 24,
         "paint": {
           "fill-color": "rgba(144, 204, 203, 1)"
@@ -676,7 +676,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 14,
+        "minzoom": 12,
         "maxzoom": 24,
         "filter": [
           "all",
@@ -710,7 +710,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 14,
+        "minzoom": 12,
         "maxzoom": 24,
         "filter": [
           "all",
@@ -744,7 +744,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 14,
+        "minzoom": 12,
         "maxzoom": 24,
         "filter": [
           "all",
@@ -782,7 +782,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 14,
+        "minzoom": 12,
         "maxzoom": 24,
         "filter": [
           "all",
@@ -812,7 +812,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 14,
+        "minzoom": 12,
         "maxzoom": 24,
         "filter": [
           "all",
@@ -835,7 +835,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 14,
+        "minzoom": 12,
         "maxzoom": 24,
         "filter": [
           "any",
@@ -876,7 +876,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 14,
+        "minzoom": 12,
         "maxzoom": 24,
         "filter": [
           "all",
@@ -914,7 +914,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 14,
+        "minzoom": 12,
         "maxzoom": 24,
         "filter": [
           "all",
@@ -950,7 +950,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 13,
+        "minzoom": 10,
         "maxzoom": 24,
         "filter": [
           "all",
@@ -990,7 +990,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 13,
+        "minzoom": 10,
         "maxzoom": 24,
         "filter": [
           "all",
@@ -1030,7 +1030,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 12,
+        "minzoom": 10,
         "maxzoom": 24,
         "filter": [
           "all",
@@ -1431,7 +1431,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 9,
+        "minzoom": 5,
         "filter": [
           "all",
           [
@@ -1493,7 +1493,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 11,
+        "minzoom": 8,
         "filter": [
           "all",
           [
@@ -1551,7 +1551,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 9,
+        "minzoom": 6,
         "filter": [
           "all",
           [
@@ -1613,7 +1613,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 11,
+        "minzoom": 8,
         "maxzoom": 20,
         "filter": [
           "all",
@@ -1677,7 +1677,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 11,
+        "minzoom": 8,
         "maxzoom": 20,
         "filter": [
           "all",
@@ -1739,7 +1739,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 4,
+        "minzoom": 3,
         "maxzoom": 11,
         "filter": [
           "all",
@@ -2331,7 +2331,7 @@
         "type": "symbol",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 14,
+        "minzoom": 0,
         "filter": [
           "all"
         ],
@@ -2372,7 +2372,7 @@
         "type": "symbol",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 11,
+        "minzoom": 5,
         "filter": [
           "all",
           [
@@ -2407,7 +2407,7 @@
         "type": "symbol",
         "source": "osm",
         "source-layer": "water_areas",
-        "minzoom": 15,
+        "minzoom": 8,
         "maxzoom": 24,
         "filter": [
           "all",
@@ -2448,7 +2448,7 @@
         "type": "symbol",
         "source": "osm",
         "source-layer": "water_areas",
-        "minzoom": 12,
+        "minzoom": 8,
         "maxzoom": 15,
         "filter": [
           "all",
@@ -2493,7 +2493,7 @@
         "type": "symbol",
         "source": "osm",
         "source-layer": "water_areas",
-        "minzoom": 8,
+        "minzoom": 6,
         "maxzoom": 12,
         "filter": [
           "all",
@@ -2574,7 +2574,7 @@
         "type": "symbol",
         "source": "osm",
         "source-layer": "landuse_areas",
-        "minzoom": 14,
+        "minzoom": 8,
         "maxzoom": 24,
         "filter": [
           "all",
@@ -2614,7 +2614,7 @@
         "type": "symbol",
         "source": "osm",
         "source-layer": "landuse_areas",
-        "minzoom": 14,
+        "minzoom": 10,
         "maxzoom": 24,
         "filter": [
           "all",
@@ -2641,7 +2641,7 @@
         "type": "symbol",
         "source": "osm",
         "source-layer": "landuse_areas",
-        "minzoom": 14,
+        "minzoom": 10,
         "maxzoom": 24,
         "filter": [
           "all",
@@ -2692,16 +2692,9 @@
         "type": "symbol",
         "source": "osm",
         "source-layer": "state_label_points",
-        "minzoom": 5,
+        "minzoom": 4,
         "maxzoom": 11,
-        "filter": [
-          "all",
-          [
-            "==",
-            "adm0_sr",
-            1
-          ]
-        ],
+       
         "layout": {
           "text-font": [
             "Open Sans Bold Italic"
@@ -2740,16 +2733,9 @@
         "type": "symbol",
         "source": "osm",
         "source-layer": "country_label_points",
-        "minzoom": 3,
+        "minzoom": 0,
         "maxzoom": 8,
-        "filter": [
-          "all",
-          [
-            "==",
-            "scalerank",
-            0
-          ]
-        ],
+        
         "layout": {
           "text-font": [
             "Open Sans Bold"
