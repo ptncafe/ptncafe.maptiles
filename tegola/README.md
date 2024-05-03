@@ -15,7 +15,7 @@ CREATE EXTENSION hstore;
 In docker-imposm3  folder
 
 ```bash
-./docker_run.sh  
+./import.sh  
 ```
 
 

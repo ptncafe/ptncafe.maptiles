@@ -1,3 +1,0 @@
-timestamp=2024-04-23T20\:20\:40Z
-sequenceNumber=4241
-replicationUrl=http://planet.openstreetmap.org/replication/day/

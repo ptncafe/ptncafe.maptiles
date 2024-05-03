@@ -5,3 +5,4 @@ tegola/tegola.exe
 mbtiles/file/*.mbtiles
 tegola/file/*.zip
 tegola/docker-imposm3/diff/000/*
+tegola/docker-imposm3/cache/*
