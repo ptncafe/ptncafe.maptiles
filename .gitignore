@@ -4,3 +4,4 @@ tegola/docker-imposm3/import/vietnam-latest.osm.pbf
 tegola/tegola.exe
 mbtiles/file/*.mbtiles
 tegola/file/*.zip
+tegola/docker-imposm3/diff/000/*
