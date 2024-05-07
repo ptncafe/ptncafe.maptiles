@@ -42,7 +42,8 @@ uri = "postgresql://docker:docker@127.0.0.1:25432/osm_db?sslmode=require&pool_ma
 	geometry_fieldname = "geom"
 	geometry_type = "polygon"
 	id_fieldname = "ogc_fid"
-	sql = "SELECT ST_AsMVTGeom(wkb_geometry,!BBOX!) AS geom, ogc_fid FROM land_polygons WHERE wkb_geometry && !BBOX!"
+	#sql = "SELECT ST_AsMVTGeom(wkb_geometry,!BBOX!) AS geom, ogc_fid FROM land_polygons WHERE wkb_geometry && !BBOX!"
+	sql = "SELECT ST_AsMVTGeom(wkb_geometry,!BBOX!) AS geom, ogc_fid FROM simplified_land_polygons WHERE wkb_geometry && !BBOX!"
 
 	# Water
 	[[providers.layers]]
@@ -386,14 +387,14 @@ uri = "postgresql://docker:docker@127.0.0.1:25432/osm_db?sslmode=require&pool_ma
 	geometry_fieldname = "geometry"
 	id_fieldname = "ogc_fid"
 	geometry_type = "linestring"
-	sql = "SELECT ST_AsMVTGeom(wkb_geometry, !BBOX!) AS geometry, ogc_fid, name, min_zoom, min_label, type, label FROM ne_10m_roads WHERE min_zoom < 5 AND type <> 'Ferry Route' AND wkb_geometry && !BBOX!"
+	sql = "SELECT ST_AsMVTGeom(wkb_geometry, !BBOX!) AS geometry, ogc_fid, name, min_zoom, min_label, type, label FROM ne_10m_roads WHERE min_zoom < 3 AND type <> 'Ferry Route' AND wkb_geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "ne_10m_roads_5"
 	geometry_fieldname = "geometry"
 	id_fieldname = "ogc_fid"
 	geometry_type = "linestring"
-	sql = "SELECT ST_AsMVTGeom(wkb_geometry, !BBOX!) AS geometry, ogc_fid, name, min_zoom, min_label, type, label FROM ne_10m_roads WHERE min_zoom <= 7  AND type <> 'Ferry Route' AND wkb_geometry && !BBOX!"
+	sql = "SELECT ST_AsMVTGeom(wkb_geometry, !BBOX!) AS geometry, ogc_fid, name, min_zoom, min_label, type, label FROM ne_10m_roads WHERE min_zoom <= 5  AND type <> 'Ferry Route' AND wkb_geometry && !BBOX!"
 
 [[maps]]
 name = "osm"

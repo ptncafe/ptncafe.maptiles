@@ -1,0 +1,3 @@
+https://github.com/go-spatial/tegola-osm
+
+osm_land.sh

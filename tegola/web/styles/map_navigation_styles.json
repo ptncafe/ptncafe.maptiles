@@ -28,14 +28,31 @@
       {
         "id": "background",
         "type": "background",
-        "minzoom": 0,
-        "maxzoom": 20,
         "layout": {
           "visibility": "visible"
         },
         "paint": {
-          "background-color": "rgba(144, 204, 203, 1)"
-        }
+          "background-color": {
+              "stops": [
+                  [
+                      6,
+                      "rgba(252, 247, 229, 1)"
+                  ],
+                  [
+                      10,
+                      "rgba(252, 247, 229, 1)"
+                  ],
+                  [
+                      14,
+                      "rgba(246, 241, 229, 1)"
+                  ],
+                  [
+                      15,
+                      "rgba(246, 241, 229, 1)"
+                  ]
+              ]
+          }
+      }
       },
       {
         "id": "land",
@@ -75,7 +92,7 @@
         "type": "fill",
         "source": "osm",
         "source-layer": "landuse_areas",
-        "minzoom": 8,
+        "minzoom": 3,
         "maxzoom": 24,
         "layout": {
           "visibility": "visible"
@@ -251,7 +268,7 @@
         "type": "fill",
         "source": "osm",
         "source-layer": "landuse_areas",
-        "minzoom": 8,
+        "minzoom": 6,
         "maxzoom": 13,
         "layout": {
           "visibility": "visible"
@@ -347,7 +364,7 @@
         "type": "fill",
         "source": "osm",
         "source-layer": "landuse_areas",
-        "minzoom": 3,
+        "minzoom": 2,
         "maxzoom": 5,
         "filter": [
           "all",
@@ -396,7 +413,7 @@
         "type": "line",
         "source": "osm",
         "source-layer": "landuse_areas",
-        "minzoom": 8,
+        "minzoom": 5,
         "maxzoom": 24,
         "filter": [
           "all",

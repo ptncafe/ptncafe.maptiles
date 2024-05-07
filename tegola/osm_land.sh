@@ -53,8 +53,8 @@ psql "dbname='postgres' host='$DB_HOST' port='$DB_PORT' user='$DB_USER' password
 # array of natural earth dataset URLs
  dataurls=(
 	#"https://osmdata.openstreetmap.de/download/land-polygons-split-3857.zip"
-  "file/land-polygons-split-3857.zip"
-  #"file/simplified-land-polygons-complete-3857.zip"
+  #"file/land-polygons-split-3857.zip"
+  ./"file/simplified-land-polygons-complete-3857.zip"
 )
 
 psql "dbname='$DB_NAME' host='$DB_HOST' port='$DB_PORT' user='$DB_USER' password='$DB_PW'" -c "DROP TABLE IF EXISTS land_polygons"
