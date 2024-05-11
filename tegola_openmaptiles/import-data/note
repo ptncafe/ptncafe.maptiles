@@ -1,0 +1,5 @@
+download https://dev.maptiler.download/geodata/omt/natural_earth_vector.sqlite_v5.1.2.zip 
+download http://osmdata.openstreetmap.de/download/water-polygons-split-3857.zip 
+download https://dev.maptiler.download/geodata/omt/lake_centerline.geojson
+
+./clean-natural-earth.sh import/natural_earth_vector.sqlite 

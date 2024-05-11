@@ -28,105 +28,105 @@ max_connections = 64     # The max connections to maintain in the connection poo
 	geometry_type = "point"
 	geometry_fieldname = "geom"
 	id_fieldname = "id"
-	sql = "SELECT ST_AsBinary(geometry) AS geom, id, name, name_en, name_de, tags, class, iata, icao, ele, ele_ft FROM layer_aerodrome_label(!BBOX!, !ZOOM!)"
+	sql = "SELECT ST_AsBinary(geometry) AS geom, id, name, name_en, name_de, tags, class, iata, icao, ele, ele_ft FROM osm_aerodrome_label_point(!BBOX!, !ZOOM!)"
 
 	[[providers.layers]]
 	name = "aeroway"
 	geometry_type = "polygon"
 	geometry_fieldname = "geom"
-	sql = "SELECT ST_AsBinary(geometry) AS geom, class, ref FROM layer_aeroway(!BBOX!, !ZOOM!)"
+	sql = "SELECT ST_AsBinary(geometry) AS geom, class, ref FROM osm_aeroway_polygon(!BBOX!, !ZOOM!)"
 
 	[[providers.layers]]
 	name = "boundary"
 	geometry_type = "linestring"
 	geometry_fieldname = "geom"
-	sql = "SELECT ST_AsBinary(geometry) AS geom, admin_level, disputed, disputed_name, claimed_by, maritime FROM layer_boundary(!BBOX!, !ZOOM!)"
+	sql = "SELECT ST_AsBinary(geometry) AS geom, admin_level, disputed, disputed_name, claimed_by, maritime FROM osm_boundary_polygon(!BBOX!, !ZOOM!)"
 
 	[[providers.layers]]
 	name = "building"
 	geometry_type = "point"
 	geometry_fieldname = "geom"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geom, osm_id, render_height, render_min_height, colour, hide_3d FROM layer_building(!BBOX!, !ZOOM!)"
+	sql = "SELECT ST_AsBinary(geometry) AS geom, osm_id, render_height, render_min_height, colour, hide_3d FROM osm_building_polygon(!BBOX!, !ZOOM!)"
 
 	[[providers.layers]]
 	name = "housenumber"
 	geometry_type = "point"
 	geometry_fieldname = "geom"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geom, osm_id, housenumber FROM layer_housenumber(!BBOX!, !ZOOM!)"
+	sql = "SELECT ST_AsBinary(geometry) AS geom, osm_id, housenumber FROM osm_housenumber_point(!BBOX!, !ZOOM!)"
 
 	[[providers.layers]]
 	name = "landcover"
 	geometry_type = "polygon"
 	geometry_fieldname = "geom"
-	sql = "SELECT ST_AsBinary(geometry) AS geom, class, subclass FROM layer_landcover(!BBOX!, !ZOOM!)"
+	sql = "SELECT ST_AsBinary(geometry) AS geom, class, subclass FROM osm_landcover_polygon(!BBOX!, !ZOOM!)"
 
 	[[providers.layers]]
 	name = "landuse"
 	geometry_type = "polygon"
 	geometry_fieldname = "geom"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geom, osm_id, class FROM layer_landuse(!BBOX!, !ZOOM!)"
+	sql = "SELECT ST_AsBinary(geometry) AS geom, osm_id, class FROM osm_landuse_polygon(!BBOX!, !ZOOM!)"
 
 	[[providers.layers]]
 	name = "mountain_peak"
 	geometry_type = "point"
 	geometry_fieldname = "geom"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geom, osm_id, name, name_en, name_de, class, tags, ele, ele_ft, rank FROM layer_mountain_peak(!BBOX!, !ZOOM!, !PIXEL_WIDTH!)"
+	sql = "SELECT ST_AsBinary(geometry) AS geom, osm_id, name, name_en, name_de, class, tags, ele, ele_ft, rank FROM osm_mountain_linestring(!BBOX!, !ZOOM!, !PIXEL_WIDTH!)"
 
 	[[providers.layers]]
 	name = "park"
 	geometry_type = "polygon"
 	geometry_fieldname = "geom"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geom, osm_id, class, name, name_en, name_de, tags, rank FROM layer_park(!BBOX!, !ZOOM!, !PIXEL_WIDTH!)"
+	sql = "SELECT ST_AsBinary(geometry) AS geom, osm_id, class, name, name_en, name_de, tags, rank FROM osm_park_polygon(!BBOX!, !ZOOM!, !PIXEL_WIDTH!)"
 
 	[[providers.layers]]
 	name = "place"
 	geometry_type = "point"
 	geometry_fieldname = "geom"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geom, osm_id, name, name_en, name_de, capital, class, iso_a2, rank FROM layer_place(!BBOX!, !ZOOM!, !PIXEL_WIDTH!)"
+	sql = "SELECT ST_AsBinary(geometry) AS geom, osm_id, name, name_en, name_de, capital, class, iso_a2, rank FROM osm_place(!BBOX!, !ZOOM!, !PIXEL_WIDTH!)"
 
 	[[providers.layers]]
 	name = "poi"
 	geometry_type = "point"
 	geometry_fieldname = "geom"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geom, osm_id, name, name_en, name_de, class, subclass, rank, agg_stop, level, layer, indoor FROM layer_poi(!BBOX!, !ZOOM!, !PIXEL_WIDTH!)"
+	sql = "SELECT ST_AsBinary(geometry) AS geom, osm_id, name, name_en, name_de, class, subclass, rank, agg_stop, level, layer, indoor FROM osm_poi_point(!BBOX!, !ZOOM!, !PIXEL_WIDTH!)"
 
 	[[providers.layers]]
 	name = "transportation"
 	geometry_type = "linestring"
 	geometry_fieldname = "geom"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geom, osm_id, class, subclass, ramp, oneway, brunnel, service, layer, level, indoor, bicycle, foot, horse, mtb_scale, surface FROM layer_transportation(!BBOX!, !ZOOM!)"
+	sql = "SELECT ST_AsBinary(geometry) AS geom, osm_id, class, subclass, ramp, oneway, brunnel, service, layer, level, indoor, bicycle, foot, horse, mtb_scale, surface FROM osm_transportation(!BBOX!, !ZOOM!)"
 
 	[[providers.layers]]
 	name = "transportation_name"
 	geometry_type = "linestring"
 	geometry_fieldname = "geom"
-	sql = "SELECT ST_AsBinary(geometry) AS geom, name, ref, ref_length, network, class, subclass, brunnel, layer, level, indoor FROM layer_transportation_name(!BBOX!, !ZOOM!)"
+	sql = "SELECT ST_AsBinary(geometry) AS geom, name, ref, ref_length, network, class, subclass, brunnel, layer, level, indoor FROM osm_transportation_name(!BBOX!, !ZOOM!)"
 
 	[[providers.layers]]
 	name = "water"
 	geometry_type = "polygon"
 	geometry_fieldname = "geom"
-	sql = "SELECT ST_AsBinary(geometry) AS geom, class, brunnel, intermittent FROM layer_water(!BBOX!, !ZOOM!)"
+	sql = "SELECT ST_AsBinary(geometry) AS geom, class, brunnel, intermittent FROM osm_water_polygon(!BBOX!, !ZOOM!)"
 
 	[[providers.layers]]
 	name = "water_name"
 	geometry_type = "point"
 	geometry_fieldname = "geom"
-	sql = "SELECT ST_AsBinary(geometry) AS geom, name, name_en, name_de, class, intermittent FROM layer_water_name(!BBOX!, !ZOOM!)"
+	sql = "SELECT ST_AsBinary(geometry) AS geom, name, name_en, name_de, class, intermittent FROM osm_water_name(!BBOX!, !ZOOM!)"
 
 	[[providers.layers]]
 	name = "waterway"
 	geometry_type = "linestring"
 	geometry_fieldname = "geom"
-	sql = "SELECT ST_AsBinary(geometry) AS geom, name, name_en, name_de, class, brunnel, intermittent FROM layer_waterway(!BBOX!, !ZOOM!)"
+	sql = "SELECT ST_AsBinary(geometry) AS geom, name, name_en, name_de, class, brunnel, intermittent FROM osm_waterway_polygon(!BBOX!, !ZOOM!)"
 
 [[maps]]
 name = "basemap"
