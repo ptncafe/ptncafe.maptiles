@@ -1,3 +1,0 @@
-timestamp=2024-04-24T00\:00\:00Z
-sequenceNumber=4039
-replicationUrl=https://download.geofabrik.de/asia/vietnam-updates

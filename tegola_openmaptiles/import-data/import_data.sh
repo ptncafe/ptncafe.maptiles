@@ -18,7 +18,7 @@ if [ -z ${PGCONN+x} ]; then
   # with the non-standard POSTGRES_* form taking precedence.
   # An error will be raised if neither form is given, except for the PGPORT
   PGHOST="127.0.0.1"
-  PGDATABASE="osm_db"
+  PGDATABASE="osm"
   PGUSER="docker"
   PGPASSWORD="docker"
   PGPORT="25432"

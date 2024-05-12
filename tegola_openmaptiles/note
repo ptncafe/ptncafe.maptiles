@@ -1,0 +1,3 @@
+./import-osm
+./import-data.sh
+./import-sql

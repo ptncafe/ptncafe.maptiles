@@ -8,12 +8,13 @@ shopt -s nullglob
 # with the non-standard POSTGRES_* form taking precedence.
 # An error will be raised if neither form is given, except for the PGPORT
 export PGHOST="127.0.0.1"
-export PGDATABASE="osm_db"
+export PGDATABASE="osm"
 export PGUSER="docker"
 export PGPASSWORD="docker"
 export PGPORT="25432"
-export SQL_TOOLS_DIR="sql"
+export SQL_TOOLS_DIR="sql_tools"
 export SQL_DIR="sql"
+export MAX_PARALLEL_PSQL="1"
 
 function exec_psql_file() {
     local file_name="$1"

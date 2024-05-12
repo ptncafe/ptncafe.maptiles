@@ -27,7 +27,7 @@
         "url": "http://localhost:9812/capabilities/basemap.json"
     }
     },
-    "sprite": "https://openmaptiles.github.io/osm-bright-gl-style/sprite",
+    "sprite": "https://openmaptiles.github.io/osm-bright-gl-style/sprite.json",
     "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={key}",
     "layers": [
       {

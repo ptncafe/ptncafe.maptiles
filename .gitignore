@@ -9,3 +9,4 @@ tegola/docker-imposm3/cache/*
 tegola_openmaptiles/docker-imposm3/cache/*
 tegola_openmaptiles/web/svgs/*
 tegola_openmaptiles/import-data/import/*
+tegola_openmaptiles/cache/*
