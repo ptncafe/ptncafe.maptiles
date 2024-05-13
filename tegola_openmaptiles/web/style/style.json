@@ -19,7 +19,7 @@
       "type": "vector"
     }
   },
-  "glyphs": "font/{fontstack}/{range}.pbf",
+  "glyphs": "http://127.0.0.1:5500/tegola_openmaptiles/web/font/{fontstack}/{range}.pbf",
   "sprite": "http://127.0.0.1:5500/tegola_openmaptiles/web/style/sprite",
   "layers": [
     {
@@ -29,7 +29,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "background-color": "#f2efe9"
+        "background-color": "rgb(239,239,239)"
       }
     },
     {
@@ -884,7 +884,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "#aad3df"
+        "fill-color": "rgb(158,189,255)"
       },
       "metadata": {},
       "filter": [
@@ -10931,28 +10931,13 @@
         ],
         "text-size": {
           "base": 1,
-          "stops": [
-
-            [
-              8,
-              5
-            ],
-           
-            [
-              9,
-              17
-            ],
-            [
-              22,
-              18
-            ]
-          ]
+          "stops": [[13, 12], [14, 13]]
         },
         "text-field": "{name}",
         "text-anchor": "center",
         "text-offset": [
           0,
-          0
+          0.15
         ],
         "symbol-placement": "line"
       },
