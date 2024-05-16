@@ -1,3 +1,28 @@
+
 ./import-osm
 ./import-data.sh
 ./import-sql
+
+
+wget  https://download.geofabrik.de/asia-latest.osm.pbf
+
+#101.28,7.7,117.5,23.83
+#POLYGON((101.35 23.82, 116.95 23.82, 116.95 8.06, 101.35 8.06, 101.35 23.82))
+
+#island #110.21,8.17,118.23,21.38
+
+osmosis  --read-pbf file=asia-latest.osm.pbf --bounding-box top=21.38  left=110.21 bottom=8.17 right=118.23 --write-pbf vietnam-island.osm.pbf
+
+
+
+custom_files_region/${OSM_HCM_FILE}
+
+
+Flexibility and Control:​
+
+Self-hosting with Tegola and PostGIS empowers you to tailor the map content and style to your specific needs.​
+
+pen_spark​
+
+ ​
+Future enhancements (e.g., adding markers, custom data overlays).​

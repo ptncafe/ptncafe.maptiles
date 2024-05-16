@@ -10,3 +10,7 @@ tegola_openmaptiles/docker-imposm3/cache/*
 tegola_openmaptiles/web/svgs/*
 tegola_openmaptiles/import-data/import/*
 tegola_openmaptiles/cache/*
+tegola_openmaptiles/diff/*
+tegola_openmaptiles/EXPIRETILES_DIR/*
+tegola_openmaptiles/file_bk/*
+tegola_openmaptiles/file/*

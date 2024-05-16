@@ -65,8 +65,9 @@ function import_osm_with_first_pbf() {
       if [ "$(ls -A "${PBF_DATA_DIR:?}"/*.pbf 2> /dev/null)" ]; then
           local pbf_file
           for pbf_file in "$PBF_DATA_DIR"/*.pbf; do
+            echo "import_pbf $pbf_file "
               import_pbf "$pbf_file"
-              break
+              #break
           done
       else
           echo "No PBF files for import found."

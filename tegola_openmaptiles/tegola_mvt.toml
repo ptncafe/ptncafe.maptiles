@@ -11,7 +11,9 @@ port = ":9815"
   Cache-Control = "s-maxage=300"
 
 # Tegola offers three tile caching strategies: "file", "redis", and "s3"
-
+[cache]
+type = "file"
+basepath="/tmp/tegola-cache4"
 
 
 # OSM (OpenMapTiles Compat)

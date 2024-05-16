@@ -44,6 +44,12 @@ for tbl in $(echo \
     "'ne_10m_ocean'," \
     "'ne_10m_populated_places'," \
     "'ne_10m_urban_areas'," \
+    "'ne_10m_admin_0_disputed_areas'," \
+    "'ne_10m_admin_0_disputed_areas_scale_rank_minor_islands'," \
+    "'ne_10m_admin_0_countries_vnm'," \
+    "'ne_10m_admin_1_label_points'," \
+    "'ne_10m_admin_1_label_points_details'," \
+    "'ne_10m_admin_0_boundary_lines_disputed_areas'," \
     "'ne_50m_admin_0_boundary_lines_land'," \
     "'ne_50m_antarctic_ice_shelves_polys'," \
     "'ne_50m_glaciated_areas'," \
@@ -52,10 +58,33 @@ for tbl in $(echo \
     "'ne_50m_rivers_lake_centerlines'," \
     "'ne_50m_urban_areas'," \
     "'ne_110m_admin_0_boundary_lines_land'," \
+    "'ne_110m_admin_0_countries'," \
+    "'ne_110m_admin_0_countries_lakes'," \
+    "'ne_110m_admin_0_map_units'," \
+    "'ne_110m_admin_0_pacific_groupings'," \
+    "'ne_110m_admin_0_scale_rank'," \
+    "'ne_110m_admin_0_sovereignty'," \
+    "'ne_110m_admin_0_tiny_countries'," \
+    "'ne_110m_admin_1_states_provinces'," \
+    "'ne_110m_admin_1_states_provinces_lakes'," \
+    "'ne_110m_admin_1_states_provinces_lines'," \
+    "'ne_110m_admin_1_states_provinces_scale_rank'," \
+    "'ne_110m_coastline'," \
+    "'ne_110m_geographic_lines'," \
+    "'ne_110m_geography_marine_polys'," \
+    "'ne_110m_geography_regions_elevation_points'," \
+    "'ne_110m_geography_regions_points'," \
+    "'ne_110m_geography_regions_polys'," \
     "'ne_110m_glaciated_areas'," \
     "'ne_110m_lakes'," \
+    "'ne_110m_land'," \
     "'ne_110m_ocean'," \
-    "'ne_110m_rivers_lake_centerlines'" \
+    "'ne_110m_populated_places'," \
+    "'ne_110m_populated_places_simple'," \
+    "'ne_110m_rivers_lake_centerlines'," \
+    "'ne_50m_admin_0_breakaway_disputed_areas'," \
+    "'ne_50m_admin_0_breakaway_disputed_areas_scale_rank'," \
+    "'ne_50m_admin_0_boundary_lines_disputed_areas'" \
   ");" | sqlite3 "$NATURAL_EARTH_DB" ); do
 
   drop_table "$tbl"

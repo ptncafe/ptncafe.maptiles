@@ -43,6 +43,7 @@ if [ -z ${1+x} ] || [ "$1" = "natural-earth" ]; then
     -lco OVERWRITE=YES \
     -lco DIM=2 \
     -nlt GEOMETRY \
+    -skipfailures \
     -overwrite \
     "${NATURAL_EARTH_FILE:?}"
 fi

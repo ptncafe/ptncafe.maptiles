@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -o errexit
+set -o pipefail
+set -o nounset
+
+# For backward compatibility, allow both PG* and POSTGRES_* forms,
+# with the non-standard POSTGRES_* form taking precedence.
+# An error will be raised if neither form is given, except for the PGPORT
+export PGHOST="127.0.0.1"
+export PGDATABASE="osm"
+export PGUSER="docker"
+export PGPASSWORD="docker"
+export PGPORT="25432"
+export SQL_TOOLS_DIR="sql"
+export SQL_DIR="sql"
+export IMPOSM_MAPPING_FILE="mapping.yaml"
+export PBF_DATA_DIR="file"
+export IMPOSM_DIFF_DIR="diff"
+export IMPOSM_CACHE_DIR="cache"
+export IMPOSM_CONFIG_FILE="config/repl_config.json"
+export EXPIRETILES_DIR="EXPIRETILES_DIR"
+export EXPIRETILES_ZOOM=14
+imposm run \
+    -connection "postgis://$PGUSER:$PGPASSWORD@$PGHOST:$PGPORT/$PGDATABASE" \
+    -mapping "${IMPOSM_MAPPING_FILE:?}" \
+    -cachedir "${IMPOSM_CACHE_DIR:?}" \
+    -diffdir "${IMPOSM_DIFF_DIR:?}" \
+    -expiretiles-dir "${EXPIRETILES_DIR:?}" \
+    -expiretiles-zoom "${EXPIRETILES_ZOOM:-14}" \
+    -config "${IMPOSM_CONFIG_FILE:?}"

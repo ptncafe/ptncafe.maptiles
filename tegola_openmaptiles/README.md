@@ -1,72 +1,84 @@
 # Demo tegola with OSM data
 
-tegola-osm<https://github.com/go-spatial/tegola-osm>
+Tegola-omt <https://github.com/dechristopher/tegola-omt>
 
-## Install extension
+This example shows how to use `tegola` with `OSM` data using `OpenMapTiles tools`.
 
-In osm_db
+## Install extension database
+
+In osm database, execute below script
+
 ```sql
 CREATE EXTENSION postgis;
 CREATE EXTENSION hstore;
 ```
 
-## Imposm3
+## Import Open Street Map Data by Imposm3
 
-In docker-imposm3  folder
+Download [asia.pbf](https://download.geofabrik.de/asia-latest.osm.pbf) to `file` folder
 
-```bash
-./import.sh  
-```
-
-
-## Import the OSM Land and Natural Earth dataset
+Run  `import-osm` shell script
 
 ```bash
-./natural_earth.sh && ./osm_land.sh
+./import-osm
 ```
 
-## postgis_helpers.sql
+## Import Natural Earth Data
 
-In osm_db
-```sql
-BEGIN;
+Download natural-earth data and relocate file/folder like below folder structure
 
- -- Inspired by http://stackoverflow.com/questions/16195986/isnumeric-with-postgresql/16206123#16206123
-CREATE OR REPLACE FUNCTION as_numeric(text) RETURNS NUMERIC AS $$
-DECLARE test NUMERIC;
-BEGIN
-     test = $1::NUMERIC;
-     RETURN test;
-EXCEPTION WHEN others THEN
-     RETURN -1;
-END;
-$$ STRICT
-LANGUAGE plpgsql IMMUTABLE;
+[natural_earth_vector.sqlite_v5.1.2.zip](https://dev.maptiler.download/geodata/omt/natural_earth_vector.sqlite_v5.1.2.zip)
 
-COMMIT;
+[water-polygons-split-3857.zip](http://osmdata.openstreetmap.de/download/water-polygons-split-3857.zip)
+
+[lake_centerline.geojson](https://dev.maptiler.download/geodata/omt/lake_centerline.geojson)
+
+```
+.
+└── import-data/
+    └── import/
+        ├── lake_centerline/
+        │   └── lake_centerline.geojson
+        ├── natural_earth/
+        │   └── natural_earth_vector.sqlite
+        └── water_polygons/
+            ├── water_polygons.shp
+            └── water_polygons.shx
 ```
 
-## postgis_index.sql
+Run ./clean-natural-earth.sh to clear data
 
-In osm_db
-```sql
-BEGIN;
-	CREATE INDEX ON osm_transport_lines_gen0 (type);
-	CREATE INDEX ON osm_transport_lines_gen1 (type);
-	CREATE INDEX ON osm_transport_lines (type);
-	CREATE INDEX ON osm_admin_areas (admin_level);
-	CREATE INDEX ON osm_landuse_areas_gen0 (type);
-	CREATE INDEX ON osm_water_lines (type);
-	CREATE INDEX ON osm_water_lines_gen0 (type);
-	CREATE INDEX ON osm_water_lines_gen1 (type);
-	CREATE INDEX ON osm_water_areas (type);
-	CREATE INDEX ON osm_water_areas_gen0 (type);	
-	CREATE INDEX ON osm_water_areas_gen1 (type);
-COMMIT;
+```bash
+cd import-data
+./clean-natural-earth.sh importnatural_earth//natural_earth_vector.sqlite 
+
+```
+And
+```bash
+./import_data.sh
+```
+
+
+## Import sql 
+
+Download [asia.pbf](https://download.geofabrik.de/asia-latest.osm.pbf) to `file` folder
+
+Run  `import-osm` shell script
+
+```bash
+cd ..
+./import-sql
 ```
 
 ## Run tegola
 
 ```bash
 ./tegola serve --config tegola.toml
+```
+
+## Update data
+
+```bash
+cd ..
+./import-update
 ```
