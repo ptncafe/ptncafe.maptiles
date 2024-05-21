@@ -124,7 +124,7 @@ sql = "SELECT ST_ASMVTGeom(geometry, !BBOX!) AS geom, name, name_en, name_de, cl
 
 [[maps]]
 name = "basemap"
-attribution = "© OpenMapTiles © OpenStreetMap Contributors"
+attribution = "© BeGroup © OpenStreetMap Contributors"
 center = [-71.140027, 42.347621, 18.0]
 
 [[maps.layers]]

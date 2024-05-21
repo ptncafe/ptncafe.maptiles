@@ -14,3 +14,4 @@ tegola_openmaptiles/diff/*
 tegola_openmaptiles/EXPIRETILES_DIR/*
 tegola_openmaptiles/file_bk/*
 tegola_openmaptiles/file/*
+mbtiles/water_polygons/*

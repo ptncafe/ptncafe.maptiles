@@ -11,7 +11,13 @@ wget  https://download.geofabrik.de/asia-latest.osm.pbf
 
 #island #110.21,8.17,118.23,21.38
 
-osmosis  --read-pbf file=asia-latest.osm.pbf --bounding-box top=21.38  left=110.21 bottom=8.17 right=118.23 --write-pbf vietnam-island.osm.pbf
+#hoang sa
+#109.91,14.59,119.0,18.22
+osmosis  --read-pbf file=asia-latest.osm.pbf --bounding-box top=18.22  left=109.91 bottom=14.59 right=119.0 --write-pbf vietnam-island-hoangsa.osm.pbf
+
+#truong sa
+#110.42,8.26,116.47,11.98
+osmosis  --read-pbf file=asia-latest.osm.pbf --bounding-box top=11.98  left=110.42 bottom=8.26 right=116.47 --write-pbf vietnam-island-truongsa.osm.pbf
 
 
 
@@ -26,3 +32,5 @@ pen_spark​
 
  ​
 Future enhancements (e.g., adding markers, custom data overlays).​
+
+docker run -it --rm -p 8888:80 ghcr.io/maplibre/maputnik:main

@@ -20,17 +20,31 @@ export IMPOSM_CACHE_DIR="cache"
 export IMPOSM_CONFIG_FILE="config/repl_config.json"
 
 
-export pbf_file="file/vietnam-latest.osm.pbf"
 export extra_flags=""
+export extra_flags="$extra_flags -appendcache"
 
-echo " into $PGHOST:$PGPORT/$PGDATABASE using Imposm in  mode..."
+
+export pbf_file="file/vietnam-island-hoangsa.osm.pbf"
+echo " into $PGHOST:$PGPORT/$PGDATABASE using Imposm in  mode... $pbf_file"
 imposm import \
         -connection "postgis://$PGUSER:$PGPASSWORD@$PGHOST:$PGPORT/$PGDATABASE" \
         -mapping "${IMPOSM_MAPPING_FILE:?}" \
         -diffdir "${IMPOSM_DIFF_DIR:?}" \
         -cachedir "${IMPOSM_CACHE_DIR:?}" \
         -read "$pbf_file" \
-        -deployproduction \
+        -write \
+        -config "${IMPOSM_CONFIG_FILE:?}" \
+        $extra_flags
+
+
+export pbf_file="file/vietnam-island-truongsa.osm.pbf"
+echo " into $PGHOST:$PGPORT/$PGDATABASE using Imposm in  mode...  $pbf_file"
+imposm import \
+        -connection "postgis://$PGUSER:$PGPASSWORD@$PGHOST:$PGPORT/$PGDATABASE" \
+        -mapping "${IMPOSM_MAPPING_FILE:?}" \
+        -diffdir "${IMPOSM_DIFF_DIR:?}" \
+        -cachedir "${IMPOSM_CACHE_DIR:?}" \
+        -read "$pbf_file" \
         -write \
         -config "${IMPOSM_CONFIG_FILE:?}" \
         $extra_flags
